@@ -1,7 +1,7 @@
 from copy import deepcopy
 
-from triangular import upper_triangular
-from utils import (
+from .triangular import upper_triangular
+from .matrix import (
     construct_e,
     construct_I,
     find_norm_2,
@@ -88,7 +88,3 @@ def solve_qr(A, b):
     X = upper_triangular(R, Q_transpose_b)
     return X
 
-
-A = [[1, 2, 3], [4, 5, 6], [7, 8, 10]]
-b = [[1], [2], [3]]
-print_matrix(solve_qr(A, b))

@@ -1,7 +1,6 @@
-from cholesky import find_R
-from triangular import lower_triangular, upper_triangular
-
-from B.utils import find_norm_2, mat_mul, mat_sub, print_matrix, transpose
+from linalg.cholesky import find_R
+from linalg.matrix import find_norm_2, mat_mul, mat_sub, print_matrix, transpose
+from linalg.triangular import lower_triangular, upper_triangular
 
 
 def find_min_square(A, b):
@@ -9,7 +8,6 @@ def find_min_square(A, b):
     A_transpose_A = mat_mul(A_transpose, A)
 
     b_bar = mat_mul(A_transpose, b)
-    print_matrix(b_bar)
 
     R = find_R(A_transpose_A)
     R_transpose = transpose(R)

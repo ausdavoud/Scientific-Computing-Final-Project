@@ -7,8 +7,6 @@ def mat_sub(A, B, add=False) -> list[list[int]]:
     m = len(B[0])
     C = [[0 for i in range(m)] for j in range(n)]
 
-    print_matrix(A)
-    print_matrix(B)
     for i in range(n):
         for j in range(m):
             C[i][j] = A[i][j] + (coefficient * B[i][j])
